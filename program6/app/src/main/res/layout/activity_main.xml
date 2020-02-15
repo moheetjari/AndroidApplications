@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Registration"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registration"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Name"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtName"
+        android:layout_marginLeft="20dp"
+        android:hint="Enter your name"
+        android:inputType="textPersonName" />
+
+
+    <TextView
+        android:id="@+id/txtGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Gender"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:id="@+id/rdoGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/txtGender">
+
+        <RadioButton
+            android:id="@+id/rdoMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/rdoFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtGender"
+            android:layout_marginLeft="50dp"
+            android:text="Female" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/txtAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rdoGroup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Address"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAddress"
+        android:layout_marginLeft="20dp"
+        android:hint="Enter Address"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/txtCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editAddress"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="City"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtCity"
+        android:layout_marginLeft="20dp"
+        android:hint="Enter City" />
+
+    <TextView
+        android:id="@+id/txtPhoneno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editCity"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Phone"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPhoneno"
+        android:layout_marginLeft="20dp"
+        android:hint="Enter Phone"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editPhone"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Register"
+        android:textSize="15dp" />
+
+</RelativeLayout>

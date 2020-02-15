@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/program1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Program1" />
+
+    <Button
+        android:id="@+id/program2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/program1"
+        android:layout_centerHorizontal="true"
+        android:text="Program2" />
+
+    <Button
+        android:id="@+id/program3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/program2"
+        android:layout_centerHorizontal="true"
+        android:text="Program3" />
+
+    <Button
+        android:id="@+id/program4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/program3"
+        android:layout_centerHorizontal="true"
+        android:text="Program4" />
+
+    <Button
+        android:id="@+id/program5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/program4"
+        android:layout_centerHorizontal="true"
+        android:text="Program5" />
+
+    <Button
+        android:id="@+id/program6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/program5"
+        android:layout_centerHorizontal="true"
+        android:text="Program6" />
+
+    <Button
+        android:id="@+id/program7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/program6"
+        android:layout_centerHorizontal="true"
+        android:text="Program7" />
+
+    <Button
+        android:id="@+id/program8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/program7"
+        android:layout_centerHorizontal="true"
+        android:text="Program8" />
+
+</RelativeLayout>
