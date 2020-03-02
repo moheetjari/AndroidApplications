@@ -1,6 +1,6 @@
 # AndroidApplications
 M.Sc(I.T.) 8th Sem & ICT 2nd Sem 803 Elective: Smart Device Computing using Android Practical Assignment 1
-Submission Date : 19-2-2020
+
 1. Develop an app to take a TextView with some default text and change text color with three different buttons Red, Green, and Blue on button click event with linear layout.
 2. Develop an app showing popup menu on button and display selected menu item in a toast.
 3. Develop a simple calculator for addition, subtraction, multiplication, and division operations with table layout.
