@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressDialog pDialog;
     private ListView listView;
 
-    private static String URL = "https://api.androidhive.info/contacts/";
+    private String URL;
 
     ArrayList<HashMap<String, String>> contactList;
 
@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.listView);
 
+        URL = "https://api.androidhive.info/contacts/";
+        Log.v("urlis",URL.toString());
         new GetContacts().execute();
     }
 
