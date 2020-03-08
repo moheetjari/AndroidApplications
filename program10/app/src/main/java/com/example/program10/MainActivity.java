@@ -2,12 +2,16 @@ package com.example.program10;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     EditText EmpName, EmpSalary;
@@ -15,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     Button BtnAdd, BtnView;
     String[] Department = {"HR", "Sales", "IT"};
     DBHelper Empdb;
+    ListView lstView;
+    CustomAdapter eAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
                 Double salary = Double.valueOf(EmpSalary.getText().toString());
 
                 Empdb.addEmployee(name, dept, salary);
+            }
+        });
+
+        BtnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, EmpList.class);
+                startActivity(intent);
             }
         });
     }

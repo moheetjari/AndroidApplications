@@ -26,7 +26,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + EMPLOYEE_TABLE_NAME +
-                "(" + EMPLOYEE_COLUMN_ID + " INTEGER PRIMARY KEY," + EMPLOYEE_COLUMN_NAME + " TEXT," + EMPLOYEE_COLUMN_DEPT + " TEXT," + EMPLOYEE_COLUMN_SALARY + " DOUBLE)"
+                "(" + EMPLOYEE_COLUMN_ID + " INTEGER PRIMARY KEY," + EMPLOYEE_COLUMN_NAME + " TEXT," + EMPLOYEE_COLUMN_DEPT + " TEXT," + EMPLOYEE_COLUMN_SALARY + " INTEGER)"
         );
     }
 
@@ -58,7 +58,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return numRows;
     }
 
-    public boolean updateEmployee(Integer Id, String name, String dept, Double salary) {
+    public boolean updateEmployee(Integer Id, String name, String dept, Integer salary) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("name", name);
@@ -73,16 +73,19 @@ public class DBHelper extends SQLiteOpenHelper {
         return db.delete(EMPLOYEE_TABLE_NAME, EMPLOYEE_COLUMN_ID + "= ? ", new String[]{Integer.toString(Id)});
     }
 
-    public ArrayList<String> getAllEmployee() {
-        ArrayList<String> arrayList = new ArrayList<String>();
+    public ArrayList<Employee> getAllEmployee() {
+        ArrayList<Employee> arrayList = new ArrayList<Employee>();
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res = db.rawQuery("select * from " + EMPLOYEE_TABLE_NAME, null);
         res.moveToFirst();
 
-        while (res.isAfterLast() == false) {
-            arrayList.add(res.getString(res.getColumnIndex(EMPLOYEE_COLUMN_NAME)));
-            res.moveToNext();
+        while (res.moveToNext()) {
+            String name = res.getString(1);
+            String dept = res.getString(2);
+            int salary = res.getInt(3);
+            Employee e = new Employee(name, dept, salary);
+            arrayList.add(e);
         }
         return arrayList;
     }
