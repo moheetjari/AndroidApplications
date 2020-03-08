@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Add a Employee"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/EmpName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAdd"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Employee Name.." />
+
+    <TextView
+        android:id="@+id/txtDept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EmpName"
+        android:layout_marginTop="20dp"
+        android:hint="Select Department" />
+
+    <Spinner
+        android:id="@+id/EmpDept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDept" />
+
+    <EditText
+        android:id="@+id/EmpSalary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EmpDept"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Employee Salary.." />
+
+    <Button
+        android:id="@+id/BtnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EmpSalary"
+        android:layout_marginTop="20dp"
+        android:text="Add Employee" />
+
+    <Button
+        android:id="@+id/BtnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BtnAdd"
+        android:layout_marginTop="10dp"
+        android:text="Add Employee" />
+
+
+</RelativeLayout>
