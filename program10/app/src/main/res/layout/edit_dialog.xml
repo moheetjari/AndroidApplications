@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/txtAdd"
+        android:id="@+id/txtUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -13,10 +13,18 @@
         android:textSize="30dp" />
 
     <EditText
+        android:id="@+id/Empid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtUpdate"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+    <EditText
         android:id="@+id/EmpName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtAdd"
+        android:layout_below="@+id/txtUpdate"
         android:layout_marginTop="20dp"
         android:hint="Enter Employee Name.." />
 

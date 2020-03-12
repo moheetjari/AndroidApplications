@@ -17,15 +17,15 @@ public class EmpList extends AppCompatActivity {
     DBHelper Empdb;
     CustomAdapter adapter;
     ListView lstView;
-    Button btnEdit, btnDelete;
+    Button BtnUpdate, BtnDelete;
     TextView EmpId, EmpName, EmpDept, EmpSalary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emp_list);
-        btnEdit = (Button) findViewById(R.id.btnEdit);
-        btnDelete = (Button) findViewById(R.id.btnDelete);
+        BtnUpdate = (Button) findViewById(R.id.btnEdit);
+        BtnDelete = (Button) findViewById(R.id.btnDelete);
         EmpId = (TextView) findViewById(R.id.txtid);
         EmpName = (TextView) findViewById(R.id.txtName);
         EmpDept = (TextView) findViewById(R.id.txtDept);
@@ -37,19 +37,5 @@ public class EmpList extends AppCompatActivity {
         adapter = new CustomAdapter(this, employees);
         lstView = (ListView) findViewById(R.id.listView);
         lstView.setAdapter(adapter);
-
-        btnEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Dialog dialog = new Dialog(EmpList.this);
-            }
-        });
-
-        btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
     }
 }

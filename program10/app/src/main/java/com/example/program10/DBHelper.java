@@ -58,19 +58,19 @@ public class DBHelper extends SQLiteOpenHelper {
         return numRows;
     }
 
-    public boolean updateEmployee(Integer Id, String name, String dept, Integer salary) {
+    public boolean updateEmployee(Integer Id, String name, Integer salary) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("name", name);
-        values.put("dept", dept);
+//        values.put("dept", dept);
         values.put("salary", salary);
         db.update(EMPLOYEE_TABLE_NAME, values, EMPLOYEE_COLUMN_ID + " = ? ", new String[]{Integer.toString(Id)});
         return true;
     }
 
-    public Integer deleteEmployee(Integer Id) {
+    public Integer deleteEmployee(int Id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(EMPLOYEE_TABLE_NAME, EMPLOYEE_COLUMN_ID + "= ? ", new String[]{Integer.toString(Id)});
+        return db.delete(EMPLOYEE_TABLE_NAME, EMPLOYEE_COLUMN_ID + " = ? ", new String[]{Integer.toString(Id)});
     }
 
     public ArrayList<Employee> getAllEmployee() {
