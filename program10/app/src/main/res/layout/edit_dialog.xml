@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/txtAdd"
@@ -12,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:text="Add a Employee"
+        android:text="Update Employee"
         android:textSize="30dp" />
 
     <EditText
@@ -46,24 +43,13 @@
         android:hint="Enter Employee Salary.." />
 
     <Button
-        android:id="@+id/BtnAdd"
+        android:id="@+id/BtnUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/EmpSalary"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:drawableLeft="@android:drawable/ic_input_add"
-        android:text="Add Employee" />
-
-    <Button
-        android:id="@+id/BtnView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/BtnAdd"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:drawableLeft="@android:drawable/ic_menu_view"
-        android:text="View Employee" />
-
+        android:drawableLeft="@android:drawable/ic_menu_edit"
+        android:text="Update" />
 
 </RelativeLayout>

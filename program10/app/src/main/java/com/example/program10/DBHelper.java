@@ -81,10 +81,11 @@ public class DBHelper extends SQLiteOpenHelper {
         res.moveToFirst();
 
         while (res.moveToNext()) {
+            int id = res.getInt(0);
             String name = res.getString(1);
             String dept = res.getString(2);
             int salary = res.getInt(3);
-            Employee e = new Employee(name, dept, salary);
+            Employee e = new Employee(id, name, dept, salary);
             arrayList.add(e);
         }
         return arrayList;

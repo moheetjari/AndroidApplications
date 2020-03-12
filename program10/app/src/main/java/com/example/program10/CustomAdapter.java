@@ -50,11 +50,13 @@ public class CustomAdapter extends BaseAdapter {
         Employee employee = employeeList.get(position);
 
         //getting view
+        TextView txtid = convertView.findViewById(R.id.txtid);
         TextView txtName = convertView.findViewById(R.id.txtName);
         TextView txtDept = convertView.findViewById(R.id.txtDept);
         TextView txtSalary = convertView.findViewById(R.id.txtSalary);
 
         //adding data to views
+        txtid.setText(String.valueOf(employee.getId()));
         txtName.setText(employee.getName());
         txtDept.setText(employee.getDept());
         txtSalary.setText(String.valueOf(employee.getSalary()));
