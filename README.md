@@ -10,3 +10,4 @@ M.Sc(I.T.) 8th Sem
 7. Develop an application to show names of 5 Indian cities into listview using static array and on selection of particular item it should display the name of city in toast.
 8. Develop an application to show custom dialog.
 9. Develop an application using JSON data.
+10. SQLite CRUD opration using custom adapter
